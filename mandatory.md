@@ -11,9 +11,14 @@ Just run
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-To update (everything), run:
+To update it, run
 ```bash
 brew update
+```
+
+To upgrade every app, run
+```bash
+brew upgrade
 ```
 
 ### wget

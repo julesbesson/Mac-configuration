@@ -16,4 +16,4 @@ Here is how to manage professionnal (or not) servers with ease.
 
 ## To-Do
 
-Write the `PHP.md`, `distant-server.md` and `mail` files.
+Write the `PHP.md` file.

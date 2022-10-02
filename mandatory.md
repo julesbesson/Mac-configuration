@@ -35,8 +35,8 @@ brew install git
 ### Configuration
 Configure git with:
 ```bash
-git config --global user.name "<GitHub username>"
-git config --global user.email <GitHub mail-adress> 
+git config --global user.name "<GitHub-username>"
+git config --global user.email <GitHub-email> 
 ```
 
 ### Get Git credential manager

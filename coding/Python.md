@@ -6,27 +6,33 @@ Although `python` is already native in MacOs, we shall use different and up-to-d
 
 ## Environments
 
-Here is how to create a new python environment and add packages to it.
+Here is how to create a new python environment and add modules to it.
 ```bash
-conda create -n <env-name> python -c <channel-name>
-conda install -n <env-name> my-package
+conda create -n myenv python -c mychannel
+conda install -n myenv mymodule
 ```
 
 Then you can activate and desactivate it.
 ```bash
-conda activate <env-name>
+conda activate myenv
 conda deactivate
 ```
 
-To update all python environments, run:
+To update a python environment, run:
 ```bash
+conda activate myenv
 conda update --all
+```
+if you want to update one module, prefer
+```bash
+conda activate myenv
+conda update mymodule
 ```
 
 To get the list of all existing environments and delete one, run:
 ```bash
 conda env list
-conda remove -n <env-name> --all
+conda remove -n myenv --all
 ```
 
 ## My setup
@@ -36,20 +42,17 @@ I prefer to have 4 separate python environments, one for general use `python-ful
 ### General use
 
 ```bash
-conda create -n python-full python -c conda-forge
-conda install -n python-full numpy matplotlib pandoc scipy tkmacosx -c conda-forge
+conda create -n python-full python -c conda-forge matplotlib notebook numpy pandoc scipy tkmacosx
 ```
 ### Mathematics
 
 ```bash
-conda create -n python-math python -c conda-forge
-conda install -n python-math numpy matplotlib scipy -c conda-forge
+conda create -n python-math python -c conda-forge matplotlib notebook numpy scipy
 ```
 ### Apps
 
 ```bash
-conda create -n python-app python -c conda-forge
-conda install -n python-gen numpy matplotlib pandoc py2app tkmacosx -c conda-forge
+conda create -n python-app python -c conda-forge matplotlib numpy pandoc py2app tkmacosx
 ```
 
 ### SageMath
